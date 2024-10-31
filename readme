@@ -1,0 +1,52 @@
+/*
+
+Autor: Anderson Lopez Martinez 
+Patron Flyweight 
+
+1.1. ¿Cuáles son 2 ventajas de utilizar el patrón Prototype en comparación con otros patrones  creacionales como Builder o Factory Method? 
+ 
+R//  Ventaja 1:  Prototipe evita la logica que usa los creacionales, evita costos y complejidad a comparacion de otros patrones que necesitan de mas clogica para cada variante 
+     Ventaja 2:  Prototype nos permite crear un clon de objetos de una clase sin tener que crear una nueva clase para el objeto
+
+1.2. Explica con tus propias palabras la diferencia entre el patrón Adapter y el patrón Facade. 
+
+El patron facade puede proporciona una interfaz simplificada. Ocultando la logica compleja de varias clases y el adaptador nos permite adaptar un clase incompatible a una clase compatible
+
+
+2.Pregunta Práctica (2,5 unidades):****************************
+ Después de girar la ruleta y conocer el patrón asignado,  búsquelo en la siguiente lista y realice el enunciado correspondiente: 
+Flyweight: 
+Desarrolla una aplicación de simulación de tráfico para una ciudad. En el simulador, cada vehículo  (carro, autobús, bicicleta) tiene características similares (color, tipo de motor, marca) pero  diferentes posiciones y velocidades. Usa el patrón Flyweight para compartir la información estática  de los vehículos (color y tipo) mientras almacenas individualmente solo las posiciones y  velocidades en cada instancia. Esto optimizará el uso de memoria cuando haya muchos vehículos  en el simulador. 
+
+*/
+
+
+/* 3. Preguntas de caso de uso (1,5 unidades): *******************
+Responda las preguntas escribiendo  comentarios en el mismo archivo de código donde resolvió la pregunta práctica: 
+Caso: Tienes que diseñar un sistema de impresión para una empresa que maneja varios tipos de  impresoras: impresoras de documentos, impresoras fotográficas, y plotters. Cada impresora tiene  un comportamiento específico según el tipo de documento que reciba, pero todas deben tener  una interfaz unificada para los usuarios. 
+
+3.1.** ¿Qué patrón de diseño usarías para asegurarte de que todas las impresoras compartan una  misma interfaz y los usuarios no tengan que preocuparse por las diferencias técnicas entre  ellas? 
+
+
+R// luego de analizar mas a fondo nos encontramos con Strategy. quien nos puede pintar una interfaz única y consistente para el usuario permitiendo varios compotamientos a a la hora de imprimir 
+
+3.2.** ¿Cómo podrías usar el patrón Observer para notificar a los usuarios cuando la impresora ha  completado un trabajo? 
+R// la impresora actuaria como el objeto que se observara sin necesidad de saber exactamente que hacen los que le observan 
+entonces cada vez que la impresora termina su trabajo, se notifica automáticamente a todos los observadores (usuarios) 
+
+3.3. Si quisieras agregar una funcionalidad que permitiera a los usuarios "pausar" y "reanudar"  un trabajo de impresión, ¿qué patrón aplicarías para gestionar esta funcionalidad?
+R// podria utilizar la tecnica del patron  command ya que encapsula las operaciones pausar y reanudar.
+o como alternativa el patron state que directamente cambia su comportamiento cuando cambia su estado de pausar a reanudar 
+*/
+
+
+/*
+2.Pregunta Práctica (2,5 unidades):
+Flyweight: 
+Desarrolla una aplicación de simulación de tráfico para una ciudad. 
+En el simulador, cada vehículo  (carro, autobús, bicicleta) tiene características similares (color, tipo de motor, marca) 
+pero  diferentes posiciones y velocidades. 
+Usa el patrón Flyweight para compartir la información estática  de los vehículos (color y tipo) 
+mientras almacenas individualmente solo las posiciones y  velocidades en cada instancia. Esto optimizará el uso de memoria cuando haya muchos vehículos  en el simulador. 
+
+*/
